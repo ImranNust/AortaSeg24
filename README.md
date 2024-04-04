@@ -15,7 +15,8 @@ This repository contains codes for AortaSeg24 Grand-Challenge.
   - ```pip install tqdm```
 - Install dependencies (if using conda)
   - ```conda install pytorch torchvision torchaudio cudatoolkit=11.7 -c pytorch```
-  - ```conda install monai --all``` _(If this doesn't work, try ```pip install monai[all]```)_
+    _(if the above command doesn't work, try ```pip3 install torch==2.0.0+cu117 torchvision==0.15.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117```)_
+  - ```conda install monai``` _(If this doesn't work, try ```pip install monai[all]```)_
   - ```conda install SimpleITK```
   - ```conda install pandas```
   - ```conda install tqdm```
