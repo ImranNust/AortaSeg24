@@ -30,6 +30,7 @@ project_root/
 - The `training/` folder holds the scripts used for training the model.
 
 ---
+
 <h2><center>Running Training</center></h2>
 To train the model, run the following command:
 
@@ -49,7 +50,7 @@ This script will:
 2. Install the following dependencies listed in the "Dependencies" section.
 3. Run the `./run_train.sh` script again.
 
-**Dependencies**
+<h3><center>Dependencies</center></h3>
 
 The model was trained using the following Python libraries and versions:
 
@@ -64,7 +65,6 @@ The model was trained using the following Python libraries and versions:
 
 **Note:** These are the specific versions used during training. Compatibility with newer versions might be possible, but it's recommended to stick to the listed versions for consistency.
 
----
 <h3><center>Parameters Details</center></h3>
 
 We have split the data into training and validation sets. For example, if you have 60 images and select 50 images for training and 10 images for validation, you need to change the **num_train_images** parameter to 50 in the `utils.datasets.DataProcessor` class. This will automatically reserve 50 images for training and 10 for validation. If, for some reason, you don't want to reserve any images for validation, you'll need to comment out the lines involving validation.
@@ -74,12 +74,14 @@ We have split the data into training and validation sets. For example, if you ha
 <h1><center><u><b>Citation</b></u></center></h1>
 
 If you find our code or data useful in your research, please cite our papers:
+
 1. @article{imran2024cis,
   title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
   author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and others},
   journal={arXiv preprint arXiv:2401.13049},
   year={2024}
 }
+
 2. @article{jiang2024microsegnet,
   title={MicroSegNet: a deep learning approach for prostate segmentation on micro-ultrasound images},
   author={Jiang, Hongxu and Imran, Muhammad and Muralidharan, Preethika and Patel, Anjali and Pensa, Jake and Liang, Muxuan and Benidir, Tarik and Grajo, Joseph R and Joseph, Jason P and Terry, Russell and others},
@@ -89,3 +91,5 @@ If you find our code or data useful in your research, please cite our papers:
   year={2024},
   publisher={Elsevier}
 }
+
+---
