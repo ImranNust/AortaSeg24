@@ -25,7 +25,7 @@ project_root/
 │       └── trainer_script.py              # Python script containing functions for training the model
 └── ...                                    # Other project files (requirements.txt, etc.)
 ```
-**Note"**
+**Note:**
 - The `data/` folder stores your training data, with each subfolder containing the corresponding images and segmentation masks.
 - The `training/` folder holds the scripts used for training the model.
 
