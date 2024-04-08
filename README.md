@@ -1,18 +1,13 @@
-# AortaSeg24_Duplicate
-This repository contains codes for AortaSeg24 Grand-Challenge.  
+<h1><center><u>AortaSeg24</u></center></h1>
 
-## Environment Setup (Optional)
-- Load the conda module
-  - ```module load conda```
-- Create and activate the environment
-  - ```conda create -n test python=3.10.14```
-  - ```conda activate test```
-- Install dependencies (if using pip)
-  - ```pip3 install torch==2.0.0+cu117 torchvision==0.15.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117```
-  - ```pip install monai[all]```
-  - ```pip install SimpleITK```
-  - ```pip install pandas```
-  - ```pip install tqdm```    
-**Our code was executed and tested on Python 3.10.14. The specific versions of all dependencies utilized are detailed within the accompanying ‘requirements.txt’ file. Researchers are encouraged to test the compatibility with alternative Python versions.**
+Welcome to the **AortaSeg24** challenge, where innovation meets collaboration in the pursuit of medical imaging excellence.
+
+---
+<h2>About the Challenge</h2>
+
+This challenge focuses on proposing deep learning models for the segmentation of the Aorta, its branches, and zones. We provide an [example script](https://github.com/ImranNust/AortaSeg24_Duplicate/tree/main/training) utilizing [SwinUNETR](https://arxiv.org/abs/2201.01266) to guide you in developing your training script and training a module. Additionally, [sample validation code](https://github.com/ImranNust/AortaSeg24_Duplicate/tree/main/validation) is available to assess your proposed model's performance. Finally, a container submission script is offered to facilitate the submission process to the Grand Challenge. Feel free to modify this script to suit your specific needs.
+
+---
+<h2><u><center> Dataset Details </center></u></h2>
 
   
