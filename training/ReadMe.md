@@ -1,21 +1,30 @@
-<h1><center><u>Training Tutorial</u></center></h1>
+<h1><center><u>Implementing a 3D Segmentation Model for Training</u></center></h1>
 
-This guide provides instructions on implementing a straightforward 3D segmentation model for training purposes.
+This guide outlines the steps to implement a straightforward 3D segmentation model for training purposes. Follow the instructions below:
 
-First, clone the respository using
+1. **Clone the Repository:**
+2. 
+   - Open your terminal or command prompt.
+   - 
+   - Use the following command to clone the repository:
+   - 
+     ```
+     git clone git@github.com:ImranNust/AortaSeg24.git
+     ```
 
-```
-git clone git clone git@github.com:ImranNust/AortaSeg24.git
-```
+3. **Navigate to the Training Directory:**
+4. 
+   - Change your working directory to the training folder within the cloned repository:
+     
+    ```
+    cd AortaSeg24/training/
+    ```
 
-Second, nevigate to the training directory using
-
-```
-cd AortaSeg24/training/
-```
+You are now ready to proceed with training your 3D segmentation model! 🚀
 
 
 <h2><center>Directory Structure</center></h2>
+
 It is assumed that you are in the training folder, and the training folder has the following files and folders inside it!
 
 ---
