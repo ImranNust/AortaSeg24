@@ -94,7 +94,7 @@ The model was trained using the following Python libraries and versions:
 
 <h3><center>Parameters Details</center></h3>
 
-You can split the data into training and validation sets. For example, if you have 50 images and you want to use 40 images for training and 10 images for validation, you need to change the **num_train_images** parameter to 40 in the `utils.datasets.DataProcessor` class. This will automatically reserve 40 images for training and 10 for validation. If, for some reason, you don't want to reserve any images for validation, you'll need to comment out the lines involving validation.
+You can split the data into training and validation sets. For example, if you have 50 images and you want to use 40 images for training and 10 images for validation, you need to change the **--num_train_images** parameter to 40 either in the _run_train.sh_ file or _trian.py_ scripts. This will automatically reserve 40 images for training and 10 for validation. If, for some reason, you don't want to reserve any images for validation, you'll need to comment out the lines involving validation.
 
 ---
 
