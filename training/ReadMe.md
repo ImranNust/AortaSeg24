@@ -35,12 +35,12 @@ training/
 |       |
 │       │   # ... (similar structure for other data samples)
 |
-├── run_train.sh                       # Bash script to execute training process (likely calls train.py)
-├── train.py                           # Python script containing the core training logic
-└── utils/                             # Folder containing utility functions used during training
-├── init.py                            # Empty file to mark utils as a Python package
-├── dataset.py                         # Python script containing functions for loading and processing data
-└── trainer_script.py                  # Python script containing functions for training the model
+├── run_train.sh                           # Bash script to execute training process (likely calls train.py)
+├── train.py                               # Python script containing the core training logic
+├── utils/                                 # Folder containing utility functions used during training
+|   ├── init.py                            # Empty file to mark utils as a Python package
+|   ├── dataset.py                         # Python script containing functions for loading and processing data
+|   └── trainer_script.py                  # Python script containing functions for training the model
 └── ...                                    # Other project files (requirements.txt, etc.)
 ```
 **Note:**
