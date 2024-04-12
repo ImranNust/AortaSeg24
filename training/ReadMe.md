@@ -8,6 +8,13 @@ First, clone the respository using
 git clone git clone git@github.com:ImranNust/AortaSeg24.git
 ```
 
+Second, nevigate to the training directory using
+
+```
+cd AortaSeg24/training/
+```
+
+
 <h2><center>Directory Structure</center></h2>
 It is assumed that you are in the training folder, and the training folder has the following files and folders inside it!
 
