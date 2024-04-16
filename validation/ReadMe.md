@@ -8,15 +8,20 @@ It is assumed that you are in the validation folder, and the validation folder h
 ---
 ```
 validation/
-├── validation_data/                                  # Folder containing the validation data
-│   ├── UF002/
-│   │   ├── images/
-│   │   │   └── UF002_CTA.mha              # Input CTA image
-│   │   └── masks/
-│   │       └── UF002_CTA_label.mha        # Output segmentation mask
-│   ├── UF003/
+├── validation_data/                       # Folder containing the validation data
+│   ├── images/
+│   │   ├── subject001_CTA.mha             # Input CTA image
+│   │   ├── subject002_CTA.mha             # Input CTA image
+│   │   │  
+│   │   │     
 │   │   # ... (similar structure for other data samples)
-│   └── ...
+│   └── masks/
+|       ├── subject001_label.mha           # Input Segmentation
+|       ├── subject002_label.mha           # Input Segmentation
+|       |
+|       |
+│       │   # ... (similar structure for other data samples)
+|
 ├── utils/                                 # Folder containing utility functions used during validation
 │       ├── init.py                        # Empty file to mark utils as a Python package
 │       ├── dataset.py                     # Python script containing functions for loading and processing data
@@ -26,6 +31,9 @@ validation/
 ├── run_validate.py                        # Python script containing the core validation logic
 └── ...                                    # Other project files (requirements.txt, etc.)
 ```
+
+
+
 **Note:**
 - The `validation/` folder holds the scripts used for validating the model and the validation_data folder.
 - The `validation_data/` folder stores your validation data, with each subfolder containing the corresponding images and segmentation masks.
