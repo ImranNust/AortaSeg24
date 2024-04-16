@@ -51,7 +51,7 @@ This script will:
 
 1. Create a virtual environment named "AortaSeg24".
 2. Activate the environment.
-3. Install all required dependencies.
+3. Assuming all the required packages are already installed.
    
 **If you encounter issues with the environment creation, you can:**
 
