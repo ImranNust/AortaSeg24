@@ -19,7 +19,7 @@ parser.add_argument("--output_csv", type=str, required=True, help="Path to outpu
 parser.add_argument("--num_classes", type=int, default=24, help="Number of classes for segmentation")
 parser.add_argument("--max_iterations", type=int, default=30000, help="Maximum number of training iterations")
 parser.add_argument("--eval_num", type=int, default=500, help="Number of validation images for evaluation")
-parser.add_argument("--num_train_images", type=int, default=50, help="Number of training images to use")
+parser.add_argument("--num_train_images", type=int, default=40, help="Number of training images to use")
 parser.add_argument("--patch_size", type=int, default=128, help="Size of patches for training")
 parser.add_argument("--spatial_dims", type=int, default=3, help="For 3D data it is 3 for 2D data it is 2")
 parser.add_argument("--feature_size", type=int, default=96, help="Initial Filters for SegResNet Model")
