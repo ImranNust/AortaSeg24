@@ -45,7 +45,7 @@ def image_and_masks_paths(root_dir):
     return files
 
 class DatasetProcessor:
-    def __init__(self, root_dir, num_train_images=50):
+    def __init__(self, root_dir, num_train_images=40):
         self.root_dir = Path(root_dir)
         self.files = image_and_masks_paths(self.root_dir)
         total_images = len(self.files)
@@ -66,7 +66,7 @@ class DatasetProcessor:
             ScaleIntensityRanged(keys=["image"], a_min=-175, a_max=250, b_min=0.0, b_max=1.0, clip=True),
             CropForegroundd(keys=["image", "label"], source_key="image", allow_smaller=True),
             Orientationd(keys=["image", "label"], axcodes="RAS"),
-            Spacingd(keys=["image", "label"], pixdim=(1.5, 1.5, 1.5), mode=("bilinear", "nearest")),
+            Spacingd(keys=["image", "label"], pixdim=(1.0, 1.0, 1.0), mode=("bilinear", "nearest")),
             RandCropByPosNegLabeld(keys=["image", "label"], 
                                    label_key="label", 
                                    spatial_size=(patch_size, patch_size, patch_size),
@@ -85,5 +85,5 @@ class DatasetProcessor:
             ScaleIntensityRanged(keys=["image"], a_min=-175, a_max=250, b_min=0.0, b_max=1.0, clip=True),
             CropForegroundd(keys=["image", "label"], source_key="image", allow_smaller=True),
             Orientationd(keys=["image", "label"], axcodes="RAS"),
-            Spacingd(keys=["image", "label"], pixdim=(1.5, 1.5, 1.5), mode=("bilinear", "nearest")),
+            Spacingd(keys=["image", "label"], pixdim=(1.0, 1.0, 1.0), mode=("bilinear", "nearest")),
         ])
