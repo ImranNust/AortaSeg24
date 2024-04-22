@@ -18,10 +18,10 @@ This challenge focuses on proposing deep learning models for the segmentation of
 ### Input Image Specifications
 - **Type**: 3D CTA Volume
 - **Axial Dimensions**: 
-  - **Minimum**: 389x389 pixels
-  - **Maximum**: 516x516 pixels
-  - **Average**: 450x450 pixels
-- **Voxel Resolution**: Isotropic, uniformly set to \(1mm \times 1mm \times 1mm\).
+  - **Minimum**: $389\times389$ pixels
+  - **Maximum**: $516\times516$ pixels
+  - **Average**: $450\times450$ pixels
+- **Voxel Resolution**: Isotropic, uniformly set to $\(1mm \times 1mm \times 1mm\)$.
 - **Axial Slice Count**: 
   - **Range**: 578 to 801 slices
   - **Average**: 695 slices
