@@ -1,4 +1,4 @@
-<h1><center><u>AortaSeg24</u></center></h1>
+<h1><center><u>Multi-Class Segmentation of Aortic Branches and Zones in Computed Tomography Angiography</u></center></h1>
 
 Welcome to the **AortaSeg24** challenge, where innovation meets collaboration in the pursuit of medical imaging excellence.
 
