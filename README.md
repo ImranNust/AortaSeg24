@@ -33,4 +33,8 @@ The output is a 3D segmentation model mirroring the input image characteristics,
 
 ![Details of the Segmentation Labels](assets/Segmentation_Details.PNG)
 
+## Accessing the Dataset
+
+To access the dataset, please participate in the **[AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)** hosted on the Grand Challenge platform. Begin by visiting the challenge page and proceed to complete the **[Data Agreement Form](https://aortaseg24.grand-challenge.org/dataset-access-information/)**. Upon submission and approval, you will gain full access to the dataset.
+
 ---
