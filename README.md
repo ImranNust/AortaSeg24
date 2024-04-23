@@ -38,3 +38,26 @@ The output is a 3D segmentation model mirroring the input image characteristics,
 To access the dataset, please participate in the **[AortaSeg24 Challenge](https://aortaseg24.grand-challenge.org/)** hosted on the Grand Challenge platform. Begin by visiting the challenge page and proceed to complete the **[Data Agreement Form](https://aortaseg24.grand-challenge.org/dataset-access-information/)**. Upon submission and approval, you will gain full access to the dataset.
 
 ---
+
+<h1><center><u><b>Citation</b></u></center></h1>
+
+If you find our code or data useful in your research, please cite our papers:
+
+1. @article{imran2024cis,
+  title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
+  author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and others},
+  journal={arXiv preprint arXiv:2401.13049},
+  year={2024}
+}
+
+2. @article{jiang2024microsegnet,
+  title={MicroSegNet: a deep learning approach for prostate segmentation on micro-ultrasound images},
+  author={Jiang, Hongxu and Imran, Muhammad and Muralidharan, Preethika and Patel, Anjali and Pensa, Jake and Liang, Muxuan and Benidir, Tarik and Grajo, Joseph R and Joseph, Jason P and Terry, Russell and others},
+  journal={Computerized Medical Imaging and Graphics},
+  volume={112},
+  pages={102326},
+  year={2024},
+  publisher={Elsevier}
+}
+
+---
