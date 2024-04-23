@@ -41,7 +41,7 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
 
 <h1><center><u><b>Citation</b></u></center></h1>
 
-If you find our code or data useful in your research, please cite our papers:
+**If you find our code or data useful in your research, please cite our papers:**
 
 1. @article{imran2024cis,
   title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
