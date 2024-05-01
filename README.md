@@ -50,6 +50,15 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
   year={2024}
 }
 
+2. @article{krebs2024volumetric,
+  title={Volumetric Analysis of Acute Uncomplicated Type B Aortic Dissection Using an Automated Deep Learning Aortic Zone Segmentation Model},
+  author={Krebs, Jonathan R and Imran, Muhammad and Fazzone, Brian and Viscardi, Chelsea and Berwick, Benjamin and Stinson, Griffin and Heithaus, Evans and Upchurch Jr, Gilbert R and Shao, Wei and Cooper, Michol A},
+  journal={medRxiv},
+  pages={2024--03},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory Press}
+}
+
 2. @article{jiang2024microsegnet,
   title={MicroSegNet: a deep learning approach for prostate segmentation on micro-ultrasound images},
   author={Jiang, Hongxu and Imran, Muhammad and Muralidharan, Preethika and Patel, Anjali and Pensa, Jake and Liang, Muxuan and Benidir, Tarik and Grajo, Joseph R and Joseph, Jason P and Terry, Russell and others},
