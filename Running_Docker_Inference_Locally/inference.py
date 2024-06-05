@@ -54,39 +54,50 @@ def run():
     ###############################################################
     # Set the environment variable to handle memory fragmentation
     os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
-    # Defining the model
-    spatial_dims = 3
-    block_inplanes = (64, 128, 256, 512) 
-    layers=(3,4,6,3)
-    in_channels = 1
-    num_classes = 24
-    encoder_channels = [64, block_inplanes[0], block_inplanes[1], block_inplanes[2]]
-    feature_size = 96
-    norm_name = 'instance'
-    model = SkipSwinNet(spatial_dims=spatial_dims, in_channels=in_channels,num_classes=num_classes, encoder_channels = encoder_channels)
-    saved_model_path = RESOURCE_PATH / "Fold0_best_metric_model.pth"
+    
+    saved_model_path = RESOURCE_PATH / "best_metric_model.pth"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
-    state_dict = torch.load(saved_model_path)
-    # Remove "module." prefix if necessary
-    new_state_dict = OrderedDict()
-    for k, v in state_dict.items():
-        if k.startswith('module.'):
-            new_state_dict[k[7:]] = v  # remove "module." prefix
-        else:
-            new_state_dict[k] = v
+    
+    
+    transform = ScaleIntensityRange(a_min=-175, a_max=250, b_min=0.0, b_max=1.0, clip=True)
+    image = transform(image).numpy()
+    image = torch.from_numpy(image).permute(2, 1, 0).unsqueeze(0).unsqueeze(0)
 
-    # Load the state dictionary into the model
-    model.load_state_dict(new_state_dict)
+    patch_size = 48
+    spatial_dims=3 
+    num_classes=24
+    model = UNet(spatial_dims=spatial_dims, 
+                 in_channels=1, 
+                 out_channels=num_classes, 
+                 channels=(32, 64, 128,256), 
+                 strides=(2,2,2), 
+                 num_res_units=2)
+    # Load the saved model state dict
+    state_dict = torch.load(saved_model_path, map_location='cpu')
+    model.load_state_dict(state_dict)
+    del state_dict  # Free memory used by the state dictionary
+    gc.collect()
+    model = model.to(device)
+    image = image.to(device)
+    print(type(image), image.dtype)
+    print("Defined the model and loaded both image and model to the appropriate device...")
 
-    # Move the model to the appropriate device
-    model.to(device)
-
-    # Optional: Wrap with DataParallel if using multiple GPUs
-    if torch.cuda.device_count() > 1:
-        model = torch.nn.DataParallel(model)
-        
-    print("Defined the model and loaded to the appropriate device...")
+    model.eval()
+    num_samples = 4
+    with torch.no_grad():
+        val_outputs = sliding_window_inference(image, (patch_size, patch_size, patch_size), num_samples, model)
+    print('Done with prediction! Now saving!!!')
+    del model # to save some memory
+    del image # to save some memory
+    torch.cuda.empty_cache()
+    gc.collect()
+    pred_label = torch.argmax(val_outputs, dim = 1)
+    if pred_label.is_cuda:
+        pred_label = pred_label.detach().cpu()
+    del val_outputs
+    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy().astype(np.uint8)
+    print(f"Aortic Branches: Min={np.min(aortic_branches)}, Max={np.max(aortic_branches)}, Type={aortic_branches.dtype}")
     ###############################################################
         
     print(f"ct_angiography shape: {image.shape}")
