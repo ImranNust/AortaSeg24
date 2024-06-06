@@ -20,7 +20,7 @@ DockerExample/
 |  ├─ your_best_model.pth             # Your trained model file
 |  └── ....                           # Additional dependencies for predictions
 |
-├── Dockerfile                        # Dockerfile script to build the Docker image (Don't change it if you are an expert!)
+├── Dockerfile                        # Dockerfile script to build the Docker image (Don't change it if you are not an expert!)
 ├── inference.py                      # Python script for generating output segmentations (Modify it as per your need)
 ├── requirements.txt                  # List of Python packages required for execution        
 ├── save.sh                           # Shell script to package the Docker image into a .tar.gz file
