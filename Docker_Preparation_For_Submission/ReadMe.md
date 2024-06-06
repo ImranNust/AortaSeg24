@@ -54,6 +54,6 @@ chmod +x save.sh
 ./save.sh
 ```
 
-Please note that in the 'save.sh` file, the container stage should be the same as the name of the container you used when you created it using `docker build`. For example, in above line you created the docker with name 'name_of_your_docker_image`; therefore, the the containe_tag should be `container_tag="name_of_your_docker_image`
+Please note that in the `save.sh` file, the `container_tag` should be the same as the name of the container you used when you created it using `docker build` command. For example, in above line you created the docker with name `name_of_your_docker_image`; therefore, the the `containe_tag` should be `container_tag="name_of_your_docker_image"`
 
 
