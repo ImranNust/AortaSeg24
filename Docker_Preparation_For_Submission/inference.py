@@ -77,23 +77,21 @@ def run():
     gc.collect()
     model = model.to(device)
     image = image.to(device)
-    print(type(image), image.dtype)
     print("Defined the model and loaded both image and model to the appropriate device...")
 
     model.eval()
     num_samples = 4
     with torch.no_grad():
         val_outputs = sliding_window_inference(image, (patch_size, patch_size, patch_size), num_samples, model)
+    val_outputs = val_outputs.detach().cpu()
     print('Done with prediction! Now saving!!!')
+    pred_label = torch.argmax(val_outputs, dim = 1).to(torch.uint8)
     del model # to save some memory
     del image # to save some memory
+    del val_outputs # to save some memory
     torch.cuda.empty_cache()
-    gc.collect()
-    pred_label = torch.argmax(val_outputs, dim = 1)
-    if pred_label.is_cuda:
-        pred_label = pred_label.detach().cpu()
-    del val_outputs
-    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy().astype(np.uint8)
+    gc.collect()    
+    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy()
     print(f"Aortic Branches: Min={np.min(aortic_branches)}, Max={np.max(aortic_branches)}, Type={aortic_branches.dtype}")
     ########## Don't Change Anything below this 
     # For some reason if you want to change the lines, make sure the output segmentation has the same properties (spacing, dimension, origin, etc) as the 
