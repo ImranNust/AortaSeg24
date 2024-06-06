@@ -80,49 +80,21 @@ def run():
     gc.collect()
     model = model.to(device)
     image = image.to(device)
-    print(type(image), image.dtype)
     print("Defined the model and loaded both image and model to the appropriate device...")
 
     model.eval()
     num_samples = 4
     with torch.no_grad():
         val_outputs = sliding_window_inference(image, (patch_size, patch_size, patch_size), num_samples, model)
+    val_outputs = val_outputs.detach().cpu()
     print('Done with prediction! Now saving!!!')
+    pred_label = torch.argmax(val_outputs, dim = 1).to(torch.uint8)
     del model # to save some memory
     del image # to save some memory
+    del val_outputs # to save some memory
     torch.cuda.empty_cache()
-    gc.collect()
-    pred_label = torch.argmax(val_outputs, dim = 1)
-    if pred_label.is_cuda:
-        pred_label = pred_label.detach().cpu()
-    del val_outputs
-    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy().astype(np.uint8)
-    print(f"Aortic Branches: Min={np.min(aortic_branches)}, Max={np.max(aortic_branches)}, Type={aortic_branches.dtype}")
-    ###############################################################
-        
-    print(f"ct_angiography shape: {image.shape}")
-    transform = ScaleIntensityRange(a_min=-175, a_max=250, b_min=0.0, b_max=1.0, clip=True)
-    image = transform(image).numpy()
-    image = torch.from_numpy(image).permute(2, 1, 0).unsqueeze(0).unsqueeze(0).to(device)
-    print(f"image shape: {image.shape}")
-    # image = image.to(torch.float32).to(device)
-   
-
-    model.eval()
-    num_samples = 4
-    with torch.no_grad():
-        val_outputs = sliding_window_inference(image, (patch_size, patch_size, patch_size), num_samples, model)
-    print('Done with prediction! Now saving!!!')
-    del model # to save some memory
-    del image # to save some memory
-    del state_dict # to save some memory
-    torch.cuda.empty_cache()
-    gc.collect()
-    pred_label = torch.argmax(val_outputs, dim = 1)
-    if pred_label.is_cuda:
-        pred_label = pred_label.detach().cpu()
-    del val_outputs
-    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy().astype(np.uint8)
+    gc.collect()    
+    aortic_branches = pred_label.squeeze().permute(2, 1, 0).numpy()
     print(f"Aortic Branches: Min={np.min(aortic_branches)}, Max={np.max(aortic_branches)}, Type={aortic_branches.dtype}")
     ######################### MY LINES END ################################################
     print('Converted to numpy and integer type 8')
