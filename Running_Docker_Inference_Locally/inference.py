@@ -55,7 +55,7 @@ def run():
     # Set the environment variable to handle memory fragmentation
     os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
     
-    saved_model_path = RESOURCE_PATH / "best_metric_model.pth"
+    saved_model_path = RESOURCE_PATH / "your_best_model.pth"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     
