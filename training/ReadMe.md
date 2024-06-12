@@ -1,4 +1,4 @@
-<h1><center><u>Implementing a 3D Segmentation Model for Training</u></center></h1>
+<div align="center"><h1><center><u>Implementing a 3D Segmentation Model for Training</u></center></h1></div> <br>
 
 This guide outlines the steps to implement a straightforward 3D segmentation model for training purposes. Follow the instructions below:
 
@@ -81,14 +81,14 @@ This script will:
 
 The model was trained using the following Python libraries and versions:
 
-- Python: 3.10
-- PyTorch: 2.0.0+cu117
-- Torchvision: 0.15.1+cu117
-- MONAI: 1.3.0
-- SimpleITK: 2.3.1
-- Pandas: 2.2.1
-- TQDM: 4.66.2
-- Typing Extensions: 4.11.0
+- ![Python: 3.10](https://img.shields.io/badge/3.10-Green?style=flat&logo=python&label=Python&labelColor=red&color=green)
+- ![PyTorch: 2.0.0+cu117](https://img.shields.io/badge/2.0.0%2Bcu117-violet?style=plastic&logo=pytorch&label=pytorch&labelColor=blue&color=green)
+- ![Torchvision: 0.15.1+cu117](https://img.shields.io/badge/0.15.1%2Bcu117-violet?style=plastic&logo=pytorch&label=Torchvision&labelColor=blue&color=%23EE4C2C)
+- ![MONAI: 1.3.0](https://img.shields.io/badge/1.3.0-violet?style=plastic&logo=monzo&label=monai&labelColor=blue&color=%23EE4C2C)
+- ![SimpleITK: 2.3.1](https://img.shields.io/badge/2.3.1-violet?style=plastic&logo=Sanity&label=SimpleITK&labelColor=blue&color=%23EE4C2C)
+- [Pandas: 2.2.1](https://img.shields.io/badge/2.2.1-violet?style=plastic&logo=pandas&label=Pandas&labelColor=blue&color=%23EE4C2C)
+- [TQDM: 4.66.2](https://img.shields.io/badge/4.66.2-violet?style=plastic&logo=tqdm&label=TQDM&labelColor=blue&color=%23EE4C2C)
+- [Typing Extensions: 4.11.0](https://img.shields.io/badge/4.11.0-violet?style=plastic&logo=Git%20Extensions&label=Typing%20Extensions&labelColor=blue&color=%23EE4C2C)
 
 **Note:** These are the specific versions used during training. Compatibility with newer versions might be possible, but it's recommended to stick to the listed versions for consistency.
 
