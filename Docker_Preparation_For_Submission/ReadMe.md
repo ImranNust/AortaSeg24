@@ -1,8 +1,11 @@
-# Docker Preparation for Challenge Submission 
+<div align=center>
+    <h1>Docker Preparation for Challenge Submission </h1>
 
 This document outlines the steps for creating a Docker container for challenge submission.
 
 ---
+
+</div>
 
 **Disclaimer:**
 This is not an official guide for preparing Docker containers and submissions to the Grand Challenge platform. It serves as a supplementary tool. For comprehensive instructions, please refer to the Grand Challenge official documentation.
