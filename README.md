@@ -53,23 +53,22 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
 
 1. @article{imran2024cis,
   title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
-  author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and others},
+  author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and Shao, Wei},
   journal={arXiv preprint arXiv:2401.13049},
   year={2024}
 }
 
-2. @article{krebs2024volumetric,
+2.@article{krebs2024volumetric,
   title={Volumetric Analysis of Acute Uncomplicated Type B Aortic Dissection Using an Automated Deep Learning Aortic Zone Segmentation Model},
   author={Krebs, Jonathan R and Imran, Muhammad and Fazzone, Brian and Viscardi, Chelsea and Berwick, Benjamin and Stinson, Griffin and Heithaus, Evans and Upchurch Jr, Gilbert R and Shao, Wei and Cooper, Michol A},
-  journal={medRxiv},
-  pages={2024--03},
+  journal={Journal of Vascular Surgery},
   year={2024},
-  publisher={Cold Spring Harbor Laboratory Press}
+  publisher={Elsevier}
 }
 
 2. @article{jiang2024microsegnet,
   title={MicroSegNet: a deep learning approach for prostate segmentation on micro-ultrasound images},
-  author={Jiang, Hongxu and Imran, Muhammad and Muralidharan, Preethika and Patel, Anjali and Pensa, Jake and Liang, Muxuan and Benidir, Tarik and Grajo, Joseph R and Joseph, Jason P and Terry, Russell and others},
+  author={Jiang, Hongxu and Imran, Muhammad and Muralidharan, Preethika and Patel, Anjali and Pensa, Jake and Liang, Muxuan and Benidir, Tarik and Grajo, Joseph R and Joseph, Jason P and Terry, Russell and Shao, Wei},
   journal={Computerized Medical Imaging and Graphics},
   volume={112},
   pages={102326},
