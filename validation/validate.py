@@ -81,7 +81,7 @@ def main(args):
     post_label = AsDiscrete(to_onehot=args.num_classes)
     post_pred = AsDiscrete(argmax=True, to_onehot=args.num_classes)
     dice_metric = DiceMetric(include_background=False, reduction="mean", get_not_nans=False)
-    class_thresholds = [0.5] * (args.num_classes - 1) # Excluding background
+    class_thresholds = [5] * (args.num_classes - 1) # Excluding background
     dice_metric = DiceMetric(include_background=False, reduction="mean", get_not_nans=False)
     nsd_metric = SurfaceDiceMetric(include_background=False, class_thresholds= class_thresholds)
     individual_dices, individual_nsds, inference_times, reporting_result = evaluate_model(val_loader=test_loader,
