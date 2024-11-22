@@ -51,19 +51,28 @@ To access the dataset, please participate in the **[AortaSeg24 Challenge](https:
 
 **If you find our code or data useful in your research, please cite our papers:**
 
-1. @article{imran2024cis,
-  title={CIS-UNet: Multi-Class Segmentation of the Aorta in Computed Tomography Angiography via Context-Aware Shifted Window Self-Attention},
-  author={Imran, Muhammad and Krebs, Jonathan R and Gopu, Veera Rajasekhar Reddy and Fazzone, Brian and Sivaraman, Vishal Balaji and Kumar, Amarjeet and Viscardi, Chelsea and Heithaus, Robert Evans and Shickel, Benjamin and Zhou, Yuyin and Shao, Wei},
-  journal={arXiv preprint arXiv:2401.13049},
-  year={2024}
-}
+```bibtex
+1. @article{IMRAN2024102470,
+    title = {CIS-UNet: Multi-class segmentation of the aorta in computed tomography angiography via context-aware shifted window self-attention},
+    author = {Muhammad Imran and Jonathan R. Krebs and Veera Rajasekhar Reddy Gopu and Brian Fazzone and Vishal Balaji Sivaraman and Amarjeet Kumar and Chelsea Viscardi and Robert Evans Heithaus and Benjamin Shickel and Yuyin Zhou and Michol A. Cooper and Wei Shao},
+    journal = {Computerized Medical Imaging and Graphics},
+    volume = {118},
+    pages = {102470},
+    year = {2024},
+    issn = {0895-6111},
+    doi = {https://doi.org/10.1016/j.compmedimag.2024.102470},
+    url = {https://www.sciencedirect.com/science/article/pii/S0895611124001472}}
 
-2. @article{krebs2024volumetric,
-  title={Volumetric Analysis of Acute Uncomplicated Type B Aortic Dissection Using an Automated Deep Learning Aortic Zone Segmentation Model},
-  author={Krebs, Jonathan R and Imran, Muhammad and Fazzone, Brian and Viscardi, Chelsea and Berwick, Benjamin and Stinson, Griffin and Heithaus, Evans and Upchurch Jr, Gilbert R and Shao, Wei and Cooper, Michol A},
-  journal={Journal of Vascular Surgery},
-  year={2024},
-  publisher={Elsevier}
-}
+2. @article{KREBS20241025,
+    title = {Volumetric analysis of acute uncomplicated type B aortic dissection using an automated deep learning aortic zone segmentation model},
+    author = {Jonathan R. Krebs and Muhammad Imran and Brian Fazzone and Chelsea Viscardi and Benjamin Berwick and Griffin Stinson and Evans Heithaus and Gilbert R. Upchurch and Wei Shao and Michol A. Cooper},
+    journal = {Journal of Vascular Surgery},
+    volume = {80},
+    number = {4},
+    pages = {1025-1034.e4},
+    year = {2024},
+    issn = {0741-5214},
+    doi = {https://doi.org/10.1016/j.jvs.2024.06.001},
+    url = {https://www.sciencedirect.com/science/article/pii/S074152142401245X}}
 
 ---
